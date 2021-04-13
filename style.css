@@ -1,0 +1,292 @@
+/*
+0 - 600px : Phone
+600 - 900px : Tablet portrait
+600- 1200px : Tablet landscape
+[1200 - 1800 ]: Normal desktop
+1800px+ : Big desktop 
+ 1em = 16px
+
+$breakpoints variables
+-small
+-phone
+-tab-port
+-tab-scape
+-big-desktop
+ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+body {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  flex-direction: column;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+/*
+0 - 600px : Phone
+600 - 900px : Tablet portrait
+600- 1200px : Tablet landscape
+[1200 - 1800 ]: Normal desktop
+1800px+ : Big desktop 
+ 1em = 16px
+
+$breakpoints variables
+-small
+-phone
+-tab-port
+-tab-scape
+-big-desktop
+ */
+h1 {
+  font-family: "Happy Monkey", cursive;
+  margin: 0;
+  padding: 0%;
+  color: #111;
+  font-size: 10rem;
+}
+@media (max-width: 56.25em) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 37.5em) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 75em) {
+  h1 {
+    font-size: 8rem;
+  }
+}
+h1 span {
+  display: table-cell;
+  margin: 0;
+  padding: 0%;
+  animation: animate 3s linear infinite;
+}
+@media (max-width: 56.25em) {
+  h1 span {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 75em) {
+  h1 span {
+    font-size: 8rem;
+  }
+}
+@media (max-width: 37.5em) {
+  h1 span {
+    font-size: 2.5rem;
+  }
+}
+h1 span:nth-child(1) {
+  animation-delay: 0s;
+}
+h1 span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.75s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 1s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 1.25s;
+  padding-left: 5%;
+}
+h1 span:nth-child(7) {
+  animation-delay: 1.5s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 1.75s;
+  padding-left: 5%;
+}
+h1 span:nth-child(9) {
+  animation-delay: 2s;
+}
+h1 span:nth-child(10) {
+  animation-delay: 2.25s;
+}
+h1 span:nth-child(11) {
+  animation-delay: 2.5s;
+}
+
+@keyframes animate {
+  0%, 100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff, 0 0 400px #00b3ff;
+  }
+  5%, 95% {
+    color: #111;
+    filter: blur(0px);
+    box-shadow: none;
+    text-shadow: none;
+  }
+}
+.section1 {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.section2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0e1623;
+  overflow: hidden;
+}
+.section2 div h2 {
+  position: relative;
+  text-align: center;
+  font-family: "Happy Monkey", cursive;
+  font-size: 8rem;
+  color: #00fe77;
+  -webkit-box-reflect: below -0.46em linear-gradient(transparent, rgba(0, 0, 0, 0.267));
+  letter-spacing: 17px;
+}
+.section2 div h2 span {
+  position: relative;
+  display: inline-block;
+}
+
+.section3 {
+  height: 100vh;
+  background: #09111e;
+}
+.section3 p {
+  font-size: 2rem;
+  margin-top: 0px;
+  font-family: "Open Sans", sans-serif;
+  color: wheat;
+  text-transform: capitalize;
+  width: 60%;
+  height: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section3 p[data-scroll] {
+  transition: opacity 1s;
+}
+.section3 p[data-scroll=in] {
+  opacity: 1;
+}
+.section3 p[data-scroll=out] {
+  opacity: 0;
+}
+
+.section4 {
+  height: 100vh;
+  background: #000;
+}
+.section4 video {
+  object-fit: cover;
+}
+.section4 h3 {
+  margin-left: -10%;
+  padding: 0%;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 100%;
+  bottom: -262%;
+  text-align: center;
+  color: #ddd;
+  font-size: 5rem;
+  font-family: sans-serif;
+  letter-spacing: 0.2rem;
+}
+.section4 h3 small {
+  opacity: 0;
+  display: inline-block;
+  animation: animatesmall 1s linear forwards;
+}
+.section4 h3 small:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.section4 h3 small:nth-child(2) {
+  animation-delay: 1s;
+}
+.section4 h3 small:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.section4 h3 small:nth-child(4) {
+  animation-delay: 2s;
+}
+.section4 h3 small:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.section4 h3 small:nth-child(6) {
+  animation-delay: 2.75s;
+  margin-left: 1%;
+}
+.section4 h3 small:nth-child(7) {
+  animation-delay: 3s;
+}
+.section4 h3 small:nth-child(8) {
+  animation-delay: 3.5s;
+}
+.section4 h3 small:nth-child(9) {
+  animation-delay: 3.75s;
+}
+.section4 h3 small:nth-child(10) {
+  animation-delay: 4s;
+}
+.section4 h3 small:nth-child(11) {
+  animation-delay: 4.5s;
+}
+.section4 h3 small:nth-child(12) {
+  animation-delay: 4.75s;
+}
+.section4 h3 small:nth-child(13) {
+  animation-delay: 5s;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: #151515;
+  text-align: center;
+}
+footer h4 {
+  position: relative;
+  font-size: 8rem;
+  color: #444;
+  width: 80%;
+}
+footer h4 span {
+  color: #0f0;
+  display: none;
+}
+
+@keyframes animatesmall {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

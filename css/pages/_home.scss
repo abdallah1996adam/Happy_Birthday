@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+.section1 {
+  background: #000;
+  @include flex;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.section2 {
+  position: relative;
+  @include flex;
+  min-height: 100vh;
+  background: #0e1623;
+  overflow: hidden;
+  div {
+    h2 {
+      position: relative;
+      text-align: center;
+      font-family: "Happy Monkey", cursive;
+      font-size: 8rem;
+      color: #00fe77;
+      -webkit-box-reflect: below -0.46em linear-gradient(transparent, rgba(0, 0, 0, 0.267));
+      letter-spacing: 17px;
+      & span {
+        position: relative;
+        display: inline-block;
+      }
+    }
+  }
+}
+.section3 {
+  height: 100vh;
+  background: #09111e;
+
+  p {
+    font-size: 2rem;
+    margin-top: 0px;
+    font-family: "Open Sans", sans-serif;
+    color: wheat;
+    text-transform: capitalize;
+    width: 60%;
+    height: 50%;
+    margin: auto;
+    @include flex;
+  }
+  p[data-scroll] {
+    transition: opacity 1s;
+  }
+  p[data-scroll="in"] {
+    opacity: 1;
+  }
+  p[data-scroll="out"] {
+    opacity: 0;
+  }
+}
+.section4 {
+  height: 100vh;
+  background: #000;
+
+  video {
+    object-fit: cover;
+  }
+  h3 {
+    margin-left: -10%;
+    padding: 0%;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+    bottom: -262%;
+    text-align: center;
+    color: #ddd;
+    font-size: 5rem;
+    font-family: sans-serif;
+    letter-spacing: 0.2rem;
+    small {
+      opacity: 0;
+      display: inline-block;
+      animation: animatesmall 1s linear forwards;
+      &:nth-child(1) {
+        animation-delay: 0.5s;
+      }
+      &:nth-child(2) {
+        animation-delay: 1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 1.5s;
+      }
+      &:nth-child(4) {
+        animation-delay: 2s;
+      }
+      &:nth-child(5) {
+        animation-delay: 2.5s;
+      }
+      &:nth-child(6) {
+        animation-delay: 2.75s;
+        margin-left: 1%;
+      }
+      &:nth-child(7) {
+        animation-delay: 3s;
+      }
+      &:nth-child(8) {
+        animation-delay: 3.5s;
+      }
+      &:nth-child(9) {
+        animation-delay: 3.75s;
+      }
+      &:nth-child(10) {
+        animation-delay: 4s;
+      }
+      &:nth-child(11) {
+        animation-delay: 4.5s;
+      }
+      &:nth-child(12) {
+        animation-delay: 4.75s;
+      }
+      &:nth-child(13) {
+        animation-delay: 5s;
+      }
+    }
+  }
+}
+
+footer {
+  @include flex;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: #151515;
+  text-align: center;
+ h4{
+   position: relative;
+   font-size: 8rem;
+   color: #444;
+   width: 80%;
+   & span{
+     color: #0f0;
+     display: none;
+   }
+ }
+}
+
+@keyframes animatesmall {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0px);
+  }
+}
